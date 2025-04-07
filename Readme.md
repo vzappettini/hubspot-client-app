@@ -103,3 +103,17 @@ npm test
 | `helmet`               | Seguridad                               |
 | `express-validator`    | Validar Formatos                        |
 | `nodemon`              | Reinicia automaticamente servidor       |
+
+
+⚙️ Documentación técnica
+Este proyecto está dividido en dos carpetas principales: frontend y backend.
+Actualmente, la lógica principal se encuentra en el backend, que es el que maneja las operaciones con la API de HubSpot.
+
+1. Las rutas están definidas en routes/contactRoutes.js, agrupando las funciones como: crear, obtener, actualizar, buscar y eliminar contactos.
+
+2. Cada ruta llama a su correspondiente función en el controlador, ubicado en controllers/contactController.js.
+
+3. El controlador luego utiliza las funciones de services/contactService.js, que hace uso de axios para comunicarse directamente con la API de HubSpot.
+
+
+
