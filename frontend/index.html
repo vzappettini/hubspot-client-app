@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contactos HubSpot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="auth">
+    <input type="text" id="username" placeholder="Usuario">
+    <input type="password" id="password" placeholder="Contraseña">
+    <button id="login-btn">Ingresar</button>
+  </div>
+
+  <div id="main" style="display:none">
+    <form id="contact-form">
+      <input type="text" id="nombre" placeholder="Nombre" required />
+      <input type="text" id="apellido" placeholder="Apellido" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <button type="submit">Agregar Contacto</button>
+    </form>
+
+    <div>
+      <input type="email" id="busqueda-email" placeholder="Buscar por email" />
+      <button id="buscar-btn">Buscar</button>
+      <button id="mostrar-todos-btn">Mostrar todos</button>
+    </div>
+
+    <table id="tabla-contactos">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- MODAL DE EDICIÓN -->
+  <div id="modal-editar" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h3>Editar Contacto</h3>
+      <form id="form-editar">
+        <input type="hidden" id="editar-id" />
+        <input type="text" id="editar-nombre" placeholder="Nombre" required />
+        <input type="text" id="editar-apellido" placeholder="Apellido" required />
+        <input type="email" id="editar-email" placeholder="Email" required />
+        <button type="submit">Guardar cambios</button>
+        <button type="button" onclick="cerrarModal()">Cancelar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+  <script>
+    // Cierre del modal si se hace clic fuera del contenido
+    window.addEventListener("click", function (event) {
+      const modal = document.getElementById("modal-editar");
+      if (event.target === modal) {
+        cerrarModal();
+      }
+    });
+
+    // Cierre con tecla Escape
+    window.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        cerrarModal();
+      }
+    });
+  </script>
+</body>
+</html>
+
