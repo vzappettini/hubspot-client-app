@@ -106,6 +106,7 @@ npm test
 
 
 ⚙️ Documentación técnica
+
 Este proyecto está dividido en dos carpetas principales: frontend y backend.
 Actualmente, la lógica principal se encuentra en el backend, que es el que maneja las operaciones con la API de HubSpot.
 
