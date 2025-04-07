@@ -40,11 +40,11 @@ HUBSPOT-APP/
 1. Cloná el proyecto:
 
    ```bash
-   git clone https://github.com/tu-usuario/hubspot-app.git
-   cd HUBSPOT-CLIENT-APP
+   git clone https://github.com/vzappettini/hubspot-client-app.git
+   cd hubspot-client-app
    ```
 
-2. Configurá el backend:
+2. Configurá el backend, instalando las dependencias necesarias:
 
    ```bash
    cd backend
